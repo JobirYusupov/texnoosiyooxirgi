@@ -82,7 +82,9 @@ class ProcessorController extends Controller
             $processor->full_price = $processor->price+$processor->motherboard->price+\App\DVD_RW::firstOr()->price+\App\Ram::firstOr()->price+\App\Hdd::firstOr()->price+\App\KeyboardMouse::firstOr()->price+\App\VideoCard::firstOr()->price+\App\EnclosureAndPowerSuppli::firstOr()->price+\App\Monitor::firstOr()->price+\App\NetworkFilter::firstOr()->price+\App\Headphone::firstOr()->price+\App\Speaker::firstOr()->price;
         }
 
-        return view('pc.computer_collection', ['processors'=>$processors, 'full_price_min'=>$full_price_min, 'full_price_max'=>$full_price_max]);
+        $processors_top = Processor::findMany(TopComputer::all()->pluck('id'));
+
+        return view('pc.computer_collection', ['processors'=>$processors, 'full_price_min'=>$full_price_min, 'full_price_max'=>$full_price_max, 'processors_top'=>$processors_top]);
     }
 
     public function show($id)
