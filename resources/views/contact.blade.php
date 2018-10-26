@@ -116,7 +116,7 @@
                 <div class="col-lg-4">
                     <div class="card-body contact text-center h-100 white-text">
 
-                        <h3 class="my-4 pb-2">Contact information</h3>
+                        <h3 class="my-4 pb-2">Kantakt ma'lumotlari</h3>
                         <ul class="text-lg-left list-unstyled ml-4">
                             <li>
                                 <p><i class="fa fa-map-marker pr-2"></i>New York, 94126, USA</p>
