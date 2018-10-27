@@ -82,7 +82,7 @@
                                 <label for="dvd-rw">@lang('pro_info.dvd_rw'):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="dvd-rw" class="form-control">
+                                <select name="" id="dvd-rw" class="form-control calculator">
                                     @foreach(\App\DVD_RW::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -94,7 +94,7 @@
                                 <label for="ram">@lang('pro_info.ram'):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="ram" class="form-control">
+                                <select name="" id="ram" class="form-control calculator">
                                     @foreach($processor->rams as $item)
                                     <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -106,7 +106,7 @@
                                 <label for="hdd">@lang('pro_info.disc'):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="hdd" class="form-control">
+                                <select name="" id="hdd" class="form-control calculator">
                                     @foreach(\App\Hdd::all() as $item)
                                     <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -118,7 +118,7 @@
                                 <label for="keyboard">@lang('pro_info.keyb_mouse'):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="keyboard" class="form-control">
+                                <select name="" id="keyboard" class="form-control calculator">
                                     @foreach(\App\KeyboardMouse::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -130,7 +130,7 @@
                                 <label for="videocard">@lang('pro_info.video_card'):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="videocard" class="form-control">
+                                <select name="" id="videocard" class="form-control calculator">
                                     @foreach(\App\VideoCard::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -142,7 +142,7 @@
                                 <label for="enclosure">Корпус и блок питания:</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="enclosure" class="form-control">
+                                <select name="" id="enclosure" class="form-control calculator">
                                     @foreach(\App\EnclosureAndPowerSuppli::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -154,7 +154,7 @@
                                 <label for="monitor">Монитор:</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="monitor" class="form-control">
+                                <select name="" id="monitor" class="form-control calculator">
                                     @foreach(\App\Monitor::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -166,7 +166,7 @@
                                 <label for="filter">Сетевой фильтр (пилот):</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="filter" class="form-control">
+                                <select name="" id="filter" class="form-control calculator">
                                     @foreach(\App\NetworkFilter::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -178,7 +178,7 @@
                                 <label for="headphone">Наушники:</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="headphone" class="form-control">
+                                <select name="" id="headphone" class="form-control calculator">
                                     @foreach(\App\Headphone::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -190,7 +190,7 @@
                                 <label for="speaker">Колонки:</label>
                             </div>
                             <div class="col-md-8">
-                                <select name="" id="speaker" class="form-control">
+                                <select name="" id="speaker" class="form-control calculator">
                                     @foreach(\App\Speaker::all() as $item)
                                         <option value="{{ $item->price }}">{{ $item->getTranslatedAttribute('name') }}</option>
                                     @endforeach
@@ -299,15 +299,15 @@
     <script>
         $(document).ready(function(){
             var summ = parseInt($("p.hidden").text());
-            $("select").each(function () {
+            $("select.calculator").each(function () {
                 summ+=parseInt($(this).val());
             });
             summ += " so'm";
             $(".product-price").text(summ);
 
-            $("select").change(function(){
+            $("select.calculator").change(function(){
                 var summ = parseInt($("p.hidden").text());
-                $("select").each(function () {
+                $("select.calculator").each(function () {
                     summ+=parseInt($(this).val());
                 });
                 summ += " so'm";
