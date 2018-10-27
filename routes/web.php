@@ -68,7 +68,14 @@ Route::get('/lang/{lang}', function ($lang) {
     return redirect()->back();
 //    return view('welcome', ['processors_new'=>$processors_new, 'processors_top'=>$processors_top]);
 })->name('lang');
+
 Route::get('/contact', function (){
     return view('contact');
 })->name('contact');
+
 Route::post('/creatmessage', 'NotebookController@store')->name('message');
+
+Route::get('/search/smartphones', 'SearchController@smartphones');
+Route::get('/search/notebooks', 'SearchController@notebooks');
+Route::get('/search/personal_computer', 'SearchController@personal_computer');
+Route::get('/search', 'SearchController@search')->name('search');

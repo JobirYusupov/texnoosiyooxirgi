@@ -4,7 +4,7 @@ return [
     'home' => 'Home',
     'smartphones' => 'Smartphones',
     'notebooks' => 'Notebooks',
-    'personal_computer' => 'Personal computer',
+    'personal_computer' => 'Computers',
     'price'=>'Price',
     'new_products'=>'New Products',
     'top_selling_computers'=>'Top Selling Computers',

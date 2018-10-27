@@ -26,11 +26,16 @@
 
     <!-- Custom stlylesheet -->
     <link type="text/css" rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-
-
-
-
-</head>
+    <style>
+        .twitter-typeahead,
+        .tt-hint,
+        .tt-input,
+        .tt-menu{
+            transform: translate(0px, -12.6%);
+            width: auto ! important;
+            font-weight: normal;
+        }
+    </style></head>
 <body>
 <!-- HEADER -->
 <header>
@@ -67,19 +72,9 @@
                 <!-- /LOGO -->
 
                 <!-- SEARCH BAR -->
-                <div class="col-md-6">
-                    <div class="header-search">
-                        <form>
-                            <select class="input-select">
-                                <option value="0">@lang('top_navbar.categories')</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
-                            </select>
-                            <input class="input" placeholder="@lang('top_navbar.search_here')">
-                            <button class="search-btn">@lang('top_navbar.search')</button>
-                        </form>
-                    </div>
-                </div>
+
+                @include('layouts.partian.search')
+
                 <!-- /SEARCH BAR -->
 
                 <!-- ACCOUNT -->
@@ -270,6 +265,9 @@
 <!-- jQuery Plugins -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- Import typeahead.js -->
+<script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
 <script src="{{ asset('js/slick.min.js') }}"></script>
 <script src="{{ asset('js/nouislider.min.js') }}"></script>
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
@@ -277,6 +275,51 @@
 {{--<script src="{{asset('js/custom.js')}}"></script>--}}
 {{--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5JX3aX-vzHGlOUMvXSkq9XigL6nrERAc    &callback=initMap"--}}
         {{--type="text/javascript"></script>--}}
+
+<!-- Initialize typeahead.js on the input -->
+<script>
+    $(document).ready(function() {
+        var category = $("#categories_select").val();
+
+        var bloodhound = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.whitespace,
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            remote: {
+                url: '/search/'+category+'?q=%QUERY%',
+                wildcard: '%QUERY%'
+            },
+        });
+
+        $( "#categories_select" ).change(function() {
+            category = $("#categories_select").val();
+
+            bloodhound.remote.url = '/search/'+category+'?q=%QUERY%';
+        });
+
+        $('#search').typeahead({
+            hint: true,
+            highlight: true,
+            minLength: 1
+        }, {
+            name: 'users',
+            source: bloodhound,
+            display: function(data) {
+                return data.name  //Input value to be set when you select a suggestion.
+            },
+            templates: {
+                empty: [
+                    '<div class="list-group search-results-dropdown"><div class="list-group-item">Nothing found.</div></div>'
+                ],
+                header: [
+                    '<div class="list-group search-results-dropdown">'
+                ],
+                suggestion: function(data) {
+                    return '<div style="font-weight:normal; margin-top:-10px ! important;" class="list-group-item">' + data.name + '</div></div>'
+                }
+            }
+        });
+    });
+</script>
 
 @yield('script')
 

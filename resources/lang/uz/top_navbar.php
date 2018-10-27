@@ -4,7 +4,7 @@ return [
     'home' => 'Bosh sahifa',
     'smartphones' => 'Smartfonlar',
     'notebooks' => 'Noutbuklar',
-    'personal_computer' => 'Shaxsiy kompyuterlar',
+    'personal_computer' => 'Kompyuterlar',
     'price'=>'Narx',
     'new_products'=>'Yangi mahsulotlar',
     'top_selling_computers'=>'Eng ko\'p sotilgan kompyuterlar',

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b5270617e66cacc7980c5af6066bf4c",
+    "content-hash": "e2d6d7d061ecf044e10053b0a136b81a",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -70,33 +70,34 @@
         },
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.4.3",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "5c304db44fba8e9c4aa0c09739e59f7be7736fdd"
+                "reference": "7db1843473e1562d8e0490b51db847d3a1415140"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/5c304db44fba8e9c4aa0c09739e59f7be7736fdd",
-                "reference": "5c304db44fba8e9c4aa0c09739e59f7be7736fdd",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/7db1843473e1562d8e0490b51db847d3a1415140",
+                "reference": "7db1843473e1562d8e0490b51db847d3a1415140",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/reflection-docblock": "^2.0.4",
-                "illuminate/console": "^5.0,<5.7",
-                "illuminate/filesystem": "^5.0,<5.7",
-                "illuminate/support": "^5.0,<5.7",
-                "php": ">=5.4.0",
-                "symfony/class-loader": "^2.3|^3.0"
+                "composer/composer": "^1.6",
+                "illuminate/console": "^5.5,<5.8",
+                "illuminate/filesystem": "^5.5,<5.8",
+                "illuminate/support": "^5.5,<5.8",
+                "php": ">=7"
             },
             "require-dev": {
                 "doctrine/dbal": "~2.3",
-                "illuminate/config": "^5.0,<5.7",
-                "illuminate/view": "^5.0,<5.7",
+                "illuminate/config": "^5.1,<5.8",
+                "illuminate/view": "^5.1,<5.8",
+                "phpro/grumphp": "^0.14",
                 "phpunit/phpunit": "4.*",
                 "scrutinizer/ocular": "~1.1",
-                "squizlabs/php_codesniffer": "~2.3"
+                "squizlabs/php_codesniffer": "^3"
             },
             "suggest": {
                 "doctrine/dbal": "Load information from the database about models for phpdocs (~2.3)"
@@ -104,7 +105,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.5-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -139,7 +140,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2018-02-08T07:56:07+00:00"
+            "time": "2018-09-06T18:41:09+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -2524,62 +2525,6 @@
                 "mailer"
             ],
             "time": "2018-07-13T07:04:35+00:00"
-        },
-        {
-            "name": "symfony/class-loader",
-            "version": "v3.4.14",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/class-loader.git",
-                "reference": "31db283fc86d3143e7ff87e922177b457d909c30"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/class-loader/zipball/31db283fc86d3143e7ff87e922177b457d909c30",
-                "reference": "31db283fc86d3143e7ff87e922177b457d909c30",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5.9|>=7.0.8"
-            },
-            "require-dev": {
-                "symfony/finder": "~2.8|~3.0|~4.0",
-                "symfony/polyfill-apcu": "~1.1"
-            },
-            "suggest": {
-                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\ClassLoader\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony ClassLoader Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
         },
         {
             "name": "symfony/console",
@@ -5271,6 +5216,62 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
+        },
+        {
+            "name": "symfony/class-loader",
+            "version": "v3.4.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/class-loader.git",
+                "reference": "31db283fc86d3143e7ff87e922177b457d909c30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/class-loader/zipball/31db283fc86d3143e7ff87e922177b457d909c30",
+                "reference": "31db283fc86d3143e7ff87e922177b457d909c30",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8"
+            },
+            "require-dev": {
+                "symfony/finder": "~2.8|~3.0|~4.0",
+                "symfony/polyfill-apcu": "~1.1"
+            },
+            "suggest": {
+                "symfony/polyfill-apcu": "For using ApcClassLoader on HHVM"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\ClassLoader\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony ClassLoader Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T11:19:56+00:00"
         },
         {
             "name": "theseer/tokenizer",

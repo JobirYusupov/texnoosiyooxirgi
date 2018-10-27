@@ -4,7 +4,7 @@ return [
     'home' => 'Главная',
     'smartphones' => 'Смартфоны',
     'notebooks' => 'Ноутбуки',
-    'personal_computer' => 'Персональный компьютер',
+    'personal_computer' => 'компьютер',
     'price'=>'Цена',
     'new_products'=>'Новые Продукты',
     'top_selling_computers'=>'Самые продаваемые компьютеры',
