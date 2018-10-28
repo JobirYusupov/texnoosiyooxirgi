@@ -4,7 +4,7 @@ return [
     'home' => 'Home',
     'smartphones' => 'Smartphones',
     'notebooks' => 'Notebooks',
-    'personal_computer' => 'Computers',
+    'personal_computer' => 'Personal computer',
     'price'=>'Price',
     'new_products'=>'New Products',
     'top_selling_computers'=>'Top Selling Computers',
@@ -37,7 +37,11 @@ return [
     'email_adress'=>'Email',
     'message'=>'Your message',
     'contact'=>'Contact',
-    'your_email'=>"Your Email"
+    'your_email'=>"Your Email",
+    'menu'=>'Menu',
+    'contact_information'=>'Contact Information',
+    'info'=>'Select a category to search for !!!',
+    'pay'=>'Buy it now !'
 
 
 

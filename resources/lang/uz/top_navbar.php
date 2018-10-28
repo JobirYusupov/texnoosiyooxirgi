@@ -4,7 +4,7 @@ return [
     'home' => 'Bosh sahifa',
     'smartphones' => 'Smartfonlar',
     'notebooks' => 'Noutbuklar',
-    'personal_computer' => 'Kompyuterlar',
+    'personal_computer' => 'Shaxsiy kompyuterlar',
     'price'=>'Narx',
     'new_products'=>'Yangi mahsulotlar',
     'top_selling_computers'=>'Eng ko\'p sotilgan kompyuterlar',
@@ -38,4 +38,9 @@ return [
     'message'=>'Sizning xabarangiz',
     'contact'=>'Biz bilan aloqa',
     'your_email'=>'Sizning elektron pochtangiz',
+    'menu'=>'Menu',
+    'contact_information'=>'Biz bilan aloqa uchun',
+    'info'=>'Qidirish uchun avval kategoriya tanlang !!!',
+    'pay'=>'Hoziroq sotib oling'
+
 ];

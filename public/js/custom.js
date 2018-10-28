@@ -11,7 +11,7 @@ $(function () {
             panControl: false,
             scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
         var markerImage = 'img/marker.png';

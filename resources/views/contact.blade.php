@@ -95,7 +95,7 @@
                             <div class="col-md-12">
                                 <div class="md-form mb-0">
                                     <textarea type="text"  name="message" id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
-                                    <label for="form-contact-message">Your message</label>
+                                    <label for="form-contact-message">@lang('top_navbar.message')</label>
                                     <a class="btn-floating btn-lg" type="submit">
                                         <i class="fa fa-send-o " style="font-size: 30px; text-shadow: 4px 2px 10px black;"></i>
                                     </a>
@@ -116,7 +116,7 @@
                 <div class="col-lg-4">
                     <div class="card-body contact text-center h-100 white-text">
 
-                        <h3 class="my-4 pb-2">Kantakt ma'lumotlari</h3>
+                        <h3 class="my-4 pb-2">@lang('top_navbar.contact_information')</h3>
                         <ul class="text-lg-left list-unstyled ml-4">
                             <li>
                                 <p><i class="fa fa-map-marker pr-2"></i>New York, 94126, USA</p>
@@ -161,6 +161,16 @@
     </section>
     </div>
     <div class="container-fluid">
-        <div id="map" ></div>
+        <div class="mapouter" style="margin-bottom: 20px;">
+            <div class="gmap_canvas">
+                <iframe style="width: 100%;" height="423" id="gmap_canvas" src="https://maps.google.com/maps?q=Tashkent%2C%20Yunusobod%2CICT%20ACADEMY&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://www.pureblack.de">pureblack.de</a>
+            </div>
+            <style>.mapouter{text-align:right;height:423px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:423px;width:100%;}</style>
+        </div>
+
     </div>
+
+@endsection
+@section('script')
 @endsection

@@ -155,7 +155,7 @@
                                     {{--</div>--}}
                                 </div>
                                 <div class="add-to-cart">
-                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                                    <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i>@lang('top_navbar.pay')</button>
                                 </div>
                             </div>
                         </div>

@@ -31,7 +31,7 @@
         .tt-hint,
         .tt-input,
         .tt-menu{
-            transform: translate(0px, -12.6%);
+            transform: translate(0px, -12.3%);
             width: auto ! important;
             font-weight: normal;
         }
@@ -65,7 +65,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="{{ route('welcome') }}" class="logo">
-                            <img src="{{ asset('storage/'.setting('site.logo')) }}" alt="">
+                            <img src="img/logo.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                         <div class="menu-toggle">
                             <a href="#">
                                 <i class="fa fa-bars"></i>
-                                <span>Menu</span>
+                                <span>@lang('top_navbar.menu')</span>
                             </a>
                         </div>
                         <!-- /Menu Toogle -->
@@ -272,9 +272,7 @@
 <script src="{{ asset('js/nouislider.min.js') }}"></script>
 <script src="{{ asset('js/jquery.zoom.min.js') }}"></script>
 <script src="{{ asset('js/main.js')}}"></script>
-{{--<script src="{{asset('js/custom.js')}}"></script>--}}
-{{--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5JX3aX-vzHGlOUMvXSkq9XigL6nrERAc    &callback=initMap"--}}
-        {{--type="text/javascript"></script>--}}
+
 
 <!-- Initialize typeahead.js on the input -->
 <script src="{{ asset('js/autocomplate.js') }}"></script>
