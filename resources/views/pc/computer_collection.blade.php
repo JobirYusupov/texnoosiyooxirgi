@@ -12,7 +12,7 @@
                 <div class="col-md-12">
                     <ul class="breadcrumb-tree">
                         <li><a href="{{ route('welcome') }}">@lang('top_navbar.home')</a></li>
-                        <li class="active">@lang('top_navbar.personal_computer') ({{ count($processors) }} Results)</li>
+                        <li class="active">@lang('top_navbar.personal_computer') ({{ count($processors) }})</li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +76,7 @@
 
                     <!-- aside Widget -->
                     <div class="aside">
-                        <h3 class="aside-title">Motherboard</h3>
+                        <h3 class="aside-title">@lang(' ')</h3>
                         <div class="checkbox-filter">
                             @foreach(\App\Motherboard::all() as $item)
                                 <div class="input-checkbox">

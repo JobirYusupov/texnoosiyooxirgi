@@ -16,7 +16,7 @@ return [
     'service'=>'Сервисы',
     'laptop_collection'=>'Коллекция <br>ноутбуков',
     'accessories_collection'=>'Коллекция <br>смартфонов',
-    'camera_collection'=>'Коллекция<br>видео<br>наблюдения',
+    'camera_collection'=>'Коллекция<br>Персональный <br>компьютер',
     'search'=>'Поиск',
     'search_here'=>'Поищи здесь',
     'all_categories'=>'Все Категории',

@@ -16,7 +16,7 @@ return [
     'service'=>'Service',
     'laptop_collection'=>'Laptop<br> Collection',
     'accessories_collection'=>'Accessories<br> Collection',
-    'camera_collection'=>'Camera <br>Collection',
+    'camera_collection'=>'Personal<br> Computer <br>Collection',
     'search'=>'Search',
     'search_here'=>'Search here',
     'all_categories'=>'All Categories',

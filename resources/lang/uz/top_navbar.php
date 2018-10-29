@@ -16,7 +16,7 @@ return [
     'service'=>'Xizmatlar',
     'laptop_collection'=>'Noutbuklar <br>to\'plami',
     'accessories_collection'=>'Aksesuarlar<br> to\'plami',
-    'camera_collection'=>'Video kuzatuv  kameralari <br>to\'plami',
+    'camera_collection'=>'Stol kompyuterlar <br>to\'plami',
     'search'=>'Qidirish',
     'search_here'=>'Qidirish',
     'all_categories'=>'Barcha kategoriyalar',

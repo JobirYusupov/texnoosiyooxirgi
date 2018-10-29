@@ -15,7 +15,7 @@
                     </div>
                     <div class="shop-body">
                         <h3>@lang('top_navbar.laptop_collection')</h3>
-                        <a href="#" class="cta-btn">@lang('top_navbar.shop_now') <i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{route('notebooks.index')}}" class="cta-btn">@lang('top_navbar.shop_now') <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -25,11 +25,11 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="{{ asset('./img/shop03.png') }}" alt="">
+                        <img src="{{ asset('./img/oneplus.png') }}" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>@lang('top_navbar.accessories_collection')</h3>
-                        <a href="#" class="cta-btn">@lang('top_navbar.shop_now')<i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{route('smartphones.index')}}" class="cta-btn">@lang('top_navbar.shop_now')<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -39,11 +39,11 @@
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="{{ asset('./img/shop02.png') }}" alt="">
+                        <img src="{{ asset('./img/Dell.png') }}" alt="">
                     </div>
                     <div class="shop-body">
                         <h3>@lang('top_navbar.camera_collection')</h3>
-                        <a href="#" class="cta-btn">@lang('top_navbar.shop_now')<i class="fa fa-arrow-circle-right"></i></a>
+                        <a href="{{route('protcessor.index')}}" class="cta-btn">@lang('top_navbar.shop_now')<i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
