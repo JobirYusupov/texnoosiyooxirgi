@@ -65,7 +65,7 @@
                 <div class="col-md-3">
                     <div class="header-logo">
                         <a href="{{ route('welcome') }}" class="logo">
-                            <img src="img/logo.png" alt="">
+                            <img src="{{ asset('img/texno.png') }}" class="img ml-auto" style="width: 100px;" alt="">
                         </a>
                     </div>
                 </div>
